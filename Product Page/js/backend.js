@@ -64,9 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             try {
 
-                const response = await fetch(
-                    "http://localhost:5000/api/enquiries",
-                    {
+                const response = await fetch("https://gojawai-backend-o0i1gwqwc-anshika19.vercel.app/api/enquiries", {
                         method: "POST",
 
                         headers: {
@@ -172,9 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             try {
 
-                const response = await fetch(
-                    "http://localhost:5000/api/enquiries",
-                    {
+                const response = await fetch("https://gojawai-backend-o0i1gwqwc-anshika19.vercel.app/api/enquiries", {
                         method: "POST",
 
                         headers: {
