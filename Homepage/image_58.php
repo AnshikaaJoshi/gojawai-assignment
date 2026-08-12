@@ -1,0 +1,2 @@
+<html><head>
+<meta charset="utf-8"></head><body><h1>A TimThumb error has occured</h1>The following error(s) occured:<br><ul><li>There is a problem in the timthumb code. Message: Please report this error at <a href="http://code.google.com/p/timthumb/issues/list">timthumb's bug tracking page</a>: Could not match mime type after verifying it previously.</li></ul><br><br>Query String : webp=1&image=/wp-content/uploads/2025/11/safari.webp&width=261&height=280&zc=1<br>TimThumb version : 2.8.10</body></html>

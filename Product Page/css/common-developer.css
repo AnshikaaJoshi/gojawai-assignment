@@ -1,0 +1,44 @@
+/* This File Use header Both */
+
+.popup-overlay-booknow{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* hidden by default */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity .3s ease;
+  z-index: 9999;
+}
+
+.popup-overlay-booknow.active{
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.popup-box{
+  background: #ffffff; /* 🔥 solid white */
+  padding: 25px;
+  width: 90%;
+  max-width: 420px;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0,0,0,.3);
+}
+
+.close-btn{
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+

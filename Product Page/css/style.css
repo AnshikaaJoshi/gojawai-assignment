@@ -1,0 +1,16 @@
+/*
+*
+* Plugin Css
+*
+*/
+.joinshow_status.success {
+    padding: 10px 10px;
+    margin: 10px 0px;
+    border: 3px solid green;
+}
+
+.joinshow_status.error {
+    padding: 10px 10px;
+    margin: 10px 0px;
+    border: 3px solid red;
+}

@@ -1,0 +1,392 @@
+.wpcf7 .screen-reader-response {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	word-wrap: normal !important;
+}
+
+.wpcf7 .hidden-fields-container {
+	display: none;
+}
+
+.wpcf7 form .wpcf7-response-output {
+	margin: 2em 0.5em 1em;
+	padding: 0.2em 1em;
+	border: 2px solid #00a0d2; /* Blue */
+}
+
+.wpcf7 form.init .wpcf7-response-output,
+.wpcf7 form.resetting .wpcf7-response-output,
+.wpcf7 form.submitting .wpcf7-response-output {
+	display: none;
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+	border-color: #46b450; /* Green */
+}
+
+.wpcf7 form.failed .wpcf7-response-output,
+.wpcf7 form.aborted .wpcf7-response-output {
+	border-color: #dc3232; /* Red */
+}
+
+.wpcf7 form.spam .wpcf7-response-output {
+	border-color: #f56e28; /* Orange */
+}
+
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output,
+.wpcf7 form.payment-required .wpcf7-response-output {
+	border-color: #ffb900; /* Yellow */
+}
+
+.wpcf7-form-control-wrap {
+	position: relative;
+}
+
+.wpcf7-not-valid-tip {
+	color: #dc3232; /* Red */
+	font-size: 1em;
+	font-weight: normal;
+	display: block;
+}
+
+.use-floating-validation-tip .wpcf7-not-valid-tip {
+	position: relative;
+	top: -2ex;
+	left: 1em;
+	z-index: 100;
+	border: 1px solid #dc3232;
+	background: #fff;
+	padding: .2em .8em;
+	width: 24em;
+}
+
+.wpcf7-list-item {
+	display: inline-block;
+	margin: 0 0 0 1em;
+}
+
+.wpcf7-list-item-label::before,
+.wpcf7-list-item-label::after {
+	content: " ";
+}
+
+.wpcf7-spinner {
+	visibility: hidden;
+	display: inline-block;
+	background-color: #23282d; /* Dark Gray 800 */
+	opacity: 0.75;
+	width: 24px;
+	height: 24px;
+	border: none;
+	border-radius: 100%;
+	padding: 0;
+	margin: 0 24px;
+	position: relative;
+}
+
+form.submitting .wpcf7-spinner {
+	visibility: visible;
+}
+
+.wpcf7-spinner::before {
+	content: '';
+	position: absolute;
+	background-color: #fbfbfc; /* Light Gray 100 */
+	top: 4px;
+	left: 4px;
+	width: 6px;
+	height: 6px;
+	border: none;
+	border-radius: 100%;
+	transform-origin: 8px 8px;
+	animation-name: spin;
+	animation-duration: 1000ms;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.wpcf7-spinner::before {
+		animation-name: blink;
+		animation-duration: 2000ms;
+	}
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes blink {
+	from {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
+.wpcf7 [inert] {
+	opacity: 0.5;
+}
+
+.wpcf7 input[type="file"] {
+	cursor: pointer;
+}
+
+.wpcf7 input[type="file"]:disabled {
+	cursor: default;
+}
+
+.wpcf7 .wpcf7-submit:disabled {
+	cursor: not-allowed;
+}
+
+.wpcf7 input[type="url"],
+.wpcf7 input[type="email"],
+.wpcf7 input[type="tel"] {
+	direction: ltr;
+}
+
+.wpcf7-reflection > output {
+	display: list-item;
+	list-style: none;
+}
+
+.wpcf7-reflection > output[hidden] {
+	display: none;
+}
+/*   CUSTOMER ALSO BOUGHT - MOBILE
+   2 CARDS VISIBLE AT ONCE*/
+
+@media (max-width: 767px) {
+
+	body {
+        padding-bottom: 75px;
+    }
+
+    /* Swiper outer container */
+    .customerSwiper {
+        width: 100%;
+        overflow: hidden;
+        padding: 5px 0 15px;
+		box-sizing: border-box;
+    }
+
+    /* 2 cards visible on mobile */
+    .customerSwiper .swiper-slide {
+    width: calc((100% - 12px) / 2) !important;
+    max-width: calc((100% - 12px) / 2) !important;
+    min-width: calc((100% - 12px) / 2) !important;
+    flex: 0 0 calc((100% - 12px) / 2) !important;
+    box-sizing: border-box;
+}
+
+    /* Card */
+    .customerSwiper .swiper-slide .card {
+    width: 100% !important;
+    height: 235px !important;
+    min-height: 235px !important;
+    max-height: 235px !important;
+    margin: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-sizing: border-box;
+}
+
+    /* Card image */
+    .customerSwiper .swiper-slide .card > img {
+    width: 100%;
+    height: 112px;
+    display: block;
+    object-fit: cover;
+}
+
+    /* Card content */
+    .customerSwiper .card-content {
+        padding: 8px 9px 10px;
+        box-sizing: border-box;
+    }
+
+    /* Rating */
+    .customerSwiper .rating {
+        margin: 0 0 3px;
+        font-size: 11px;
+        line-height: 1.2;
+        color: #555;
+        white-space: nowrap;
+    }
+
+    .customerSwiper .rating .fa-star {
+        color: #f5a623;
+        margin-right: 3px;
+    }
+
+    /* Title */
+    .customerSwiper .title {
+    font-size: 13px;
+    line-height: 16px;
+    height: 32px;
+    min-height: 32px;
+    max-height: 32px;
+    margin: 3px 0 5px;
+    color: #222;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+	line-clamp: 2;
+}
+
+    /* Instant confirmation */
+    .customerSwiper .instant {
+        font-size: 10px;
+        line-height: 1.25;
+        color: #666;
+        margin: 0 0 4px;
+    }
+
+    .customerSwiper .instant .fa-bolt {
+        color: #f5a623;
+        margin-right: 3px;
+    }
+
+    /* Price */
+    .customerSwiper .price {
+        font-size: 10px;
+        line-height: 1.2;
+        color: #777;
+        margin: 0;
+    }
+
+    .customerSwiper .price strong {
+        font-size: 14px;
+        color: #222;
+        margin-left: 2px;
+    }
+
+    /* Hide desktop arrows on mobile */
+    .customerSwiper .slider-btn {
+        display: none;
+    }
+}
+/* Mobile Sticky Bottom Bar */
+
+.mobile-sticky-bottom {
+    display: none;
+}
+
+@media (max-width: 767px) {
+
+    body {
+        padding-bottom: 75px;
+    }
+
+    .mobile-sticky-bottom {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        width: 100%;
+        min-height: 68px;
+
+        background: #fff;
+        border-top: 1px solid #ddd;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 8px 12px;
+        box-sizing: border-box;
+
+        z-index: 99999;
+
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Price */
+    .sticky-price {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        line-height: 1.2;
+    }
+
+    .sticky-price span {
+        font-size: 11px;
+        color: #777;
+        margin-bottom: 2px;
+    }
+
+    .sticky-price strong {
+        font-size: 18px;
+        color: #222;
+        font-weight: 700;
+    }
+
+    /* Buttons */
+    .sticky-actions {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .sticky-actions a {
+        height: 42px;
+        padding: 0 13px;
+
+        border-radius: 6px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+
+        text-decoration: none;
+
+        font-size: 12px;
+        font-weight: 600;
+
+        box-sizing: border-box;
+    }
+
+    /* Call */
+    .sticky-call {
+        background: #222;
+        color: #fff;
+    }
+
+    /* WhatsApp */
+    .sticky-whatsapp {
+        background: #25D366;
+        color: #fff;
+    }
+
+    .sticky-actions i {
+        font-size: 15px;
+    }
+}
