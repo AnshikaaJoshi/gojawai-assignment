@@ -2070,12 +2070,62 @@ var wc_order_attribution = {"params":{"lifetime":1.0e-5,"session":30,"base64":fa
 		<!--Popup Book Now-->
 		<!-- Popup -->
 		<div class="popup-overlay-booknow" id="popup">
-		  <div class="popup-box">
-			<span class="close-btn">×</span>
-			<h2>Book Jawai Leopard Safari</h2>
-			<p>Fill details to continue booking.</p>
-		  </div>
-		</div>
+
+    <div class="popup-box">
+
+        <span class="close-btn">&times;</span>
+
+        <h2>Book Jawai Leopard Safari</h2>
+        <p>Fill details to continue booking.</p>
+
+        <form id="bookingForm">
+
+            <input
+                type="text"
+                id="bookingName"
+                placeholder="Name"
+                required
+            >
+
+            <input
+                type="email"
+                id="bookingEmail"
+                placeholder="Email"
+            >
+
+            <input
+                type="tel"
+                id="bookingPhone"
+                placeholder="Phone"
+                required
+            >
+
+            <input
+                type="date"
+                id="bookingDate"
+            >
+
+            <input
+                type="number"
+                id="bookingTravellers"
+                placeholder="Travellers"
+                min="1"
+            >
+
+            <textarea
+                id="bookingMessage"
+                placeholder="Message"
+            ></textarea>
+
+            <button type="submit">
+                Submit Booking
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
 		<!-- Mobile Sticky Bottom Bar -->
 <div class="mobile-sticky-bottom">
 
@@ -2218,33 +2268,40 @@ $('document').ready(function(){
 </script>
 
 <script>
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
 
-  const popup = document.getElementById("popup");
-  const openBtns = document.querySelectorAll(".openPopup");
-  const closeBtn = popup.querySelector(".close-btn");
+    const popup = document.getElementById("popup");
 
-  if(!popup) return;
+    if (!popup) return;
 
-  // Open popup
-  openBtns.forEach(btn => {
-    btn.addEventListener("click", function(e){
-      e.preventDefault();
-      popup.classList.add("active");
+    const openBtns = document.querySelectorAll(".openPopup");
+    const closeBtn = popup.querySelector(".close-btn");
+
+    // Open popup
+    openBtns.forEach(btn => {
+        btn.addEventListener("click", function (e) {
+            e.preventDefault();
+            popup.classList.add("active");
+        });
     });
-  });
 
-  // Close button
-  closeBtn.addEventListener("click", function(){
-    popup.classList.remove("active");
-  });
-
-  // Overlay click close
-  popup.addEventListener("click", function(e){
-    if(e.target === popup){
-      popup.classList.remove("active");
+    // Close button
+    if (closeBtn) {
+        closeBtn.addEventListener("click", function () {
+            popup.classList.remove("active");
+        });
     }
-  });
+
+    // Overlay click close
+    popup.addEventListener("click", function (e) {
+        if (e.target === popup) {
+            popup.classList.remove("active");
+        }
+    });
 
 });
-</script></body></html><!-- modal --><!-- Modal -->
+</script>
+
+<script src="js/backend.js"></script>
+</body>
+</html>

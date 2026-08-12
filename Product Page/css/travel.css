@@ -3194,3 +3194,174 @@ body.no-scroll { overflow: hidden; }
         top: auto !important;
     }
 }
+
+/* =========================
+   BOOK NOW POPUP
+========================= */
+
+.popup-overlay-booknow {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    padding: 20px;
+}
+
+.popup-overlay-booknow.active {
+    display: flex;
+}
+
+.popup-overlay-booknow .popup-box {
+    width: 100%;
+    max-width: 520px;
+    background: #fff;
+    border-radius: 14px;
+    padding: 30px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.popup-overlay-booknow .close-btn {
+    position: absolute;
+    right: 18px;
+    top: 12px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: #333;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.popup-overlay-booknow .close-btn:hover {
+    background: #e5e5e5;
+}
+
+.popup-overlay-booknow h2 {
+    margin: 0 40px 8px 0;
+    font-size: 26px;
+    font-weight: 700;
+    color: #222;
+}
+
+.popup-overlay-booknow p {
+    margin-bottom: 22px;
+    color: #777;
+    font-size: 14px;
+}
+
+/* Form */
+
+#bookingForm {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+#bookingForm input,
+#bookingForm textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 13px 14px;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+    background: #fff;
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+#bookingForm input {
+    height: 48px;
+}
+
+#bookingForm textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+#bookingForm input:focus,
+#bookingForm textarea:focus {
+    border-color: #f58220;
+    box-shadow: 0 0 0 3px rgba(245, 130, 32, 0.12);
+}
+
+#bookingForm input::placeholder,
+#bookingForm textarea::placeholder {
+    color: #999;
+}
+
+#bookingForm button {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 20px;
+    background: #f58220;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+#bookingForm button:hover {
+    background: #df6f12;
+}
+
+#bookingForm button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 576px) {
+
+    .popup-overlay-booknow {
+        padding: 15px;
+    }
+
+    .popup-overlay-booknow .popup-box {
+        padding: 22px 18px;
+        border-radius: 12px;
+        max-height: 92vh;
+    }
+
+    .popup-overlay-booknow h2 {
+        font-size: 21px;
+    }
+
+    #bookingForm {
+        gap: 11px;
+    }
+
+    #bookingForm input {
+        height: 45px;
+    }
+
+    #bookingForm input,
+    #bookingForm textarea {
+        font-size: 14px;
+        padding: 11px 12px;
+    }
+
+    #bookingForm textarea {
+        min-height: 85px;
+    }
+
+}
